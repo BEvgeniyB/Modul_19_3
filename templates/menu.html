@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{Title}}</title>
+    <link rel="stylesheet" type="text/css" href= '{% static "style.css" %}'>
+</head>
+<body>
+    <pagename >
+        {% block pagename  %}
+            <h1 align="left">Главная страница</h1>
+        {% endblock %}
+    </pagename >
+
+    <br>
+    <br>
+    <menu>
+        {% block menu %}
+            {% include 'menu_2.html'%}
+        {% endblock %}
+    </menu>
+
+    <content >
+        {% block content %}
+            <p></p>
+        {% endblock %}
+    </content>
+
+    <cellar>
+        {% block cellar %}
+        <form action="/main">
+            <button class="b2">Возврат на главную страницу</button>
+        </form>
+        {% endblock %}
+    </cellar>
+</body>
+</html>

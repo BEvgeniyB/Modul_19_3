@@ -1,0 +1,25 @@
+{% extends "menu.html" %}
+
+{% block pagename  %}
+     <h1>ИГРЫ</h1>
+{% endblock %}
+
+{% block menu %}
+    {{ block.super}}
+{% endblock %}
+
+{% block content %}
+    <br>
+    <form>
+        <ul >
+            {% for t in list %}
+            <li >  {{t.title}} | {{t.description}}. Стоимость : {{t.cost}}  <button formaction="/cart" class="b1" type="submit"> Купить  </button></li>
+            <br>
+            {% endfor %}
+        </ul>
+    <br>
+    <br>
+    </form>
+{% endblock %}
+
+
